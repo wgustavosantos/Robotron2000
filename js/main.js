@@ -1,19 +1,21 @@
 function alterar(e) {
 
-    if (e.target.id === 'somar') {
-        braco.value++;
-    } else if (e.target.id === 'subtrair') {
-        braco.value--;
+    if (e.target.innerText === '+') {
+        var valor = e.target.parentNode.querySelector('.controle-contador');
+        valor.value++;
+        
+    } else if (e.target.innerText === '-') {
+        var valor = e.target.parentNode.querySelector('.controle-contador');
+        valor.value--;
     }
 }
 
-var soma = document.querySelector('#somar');
-var subtracao = document.querySelector('#subtrair');
-var braco = document.querySelector('#braco');
-var controle = document.querySelectorAll('.peca > .controle > .controle-ajuste');
+var braco = document.querySelector('.contrle-contador');
+var controle = document.querySelectorAll('.controle-ajuste');
 
 controle.forEach((e) => {
     e.addEventListener('click', (evento) => {
         alterar(evento)
     })
 })
+c
