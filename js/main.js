@@ -1,11 +1,11 @@
-document.querySelector('#robotron').addEventListener('click', (e) => {console.log(e)});
+var soma = document.querySelector('#somar');
+var subtracao = document.querySelector('#subtrair');
+var braco = document.querySelector('#braco');
 
-function dizOi() {
-    console.log("oi");
-}
+soma.addEventListener('click', () => {
+    braco.value++;
+})
 
-function dizOiComParametro(nome){
-    console.log("Oi, " + nome + "! Bem vindo.")
-}
-
-
+subtracao.addEventListener('click', () => {
+    braco.value--;
+})
